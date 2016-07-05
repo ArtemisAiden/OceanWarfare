@@ -20,10 +20,19 @@ def get_win_console_size():
 
     return [sizex, sizey]
 class Menu(object):
+    from sys import platform
     def __init__(self):
+        self.platform = platform
         self.game_mode = 0
         self.players = 0
+    def get_banner():
+        if self.platform.startswith("win"):
+            pass
+        else:
+            return "Welcome to Ocean War:"
+            
     def print_welcome():
         pass
+
 
 #get_win_console_size()
